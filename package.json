@@ -1,0 +1,31 @@
+{
+  "name": "UAFAM-nacional",
+  "version": "1.0.0",
+  "description": "Página web oficial UAFAM en Jarabacoa, Dominican Republic.",
+  "main": "index.html",
+  "scripts": {
+    "build": "jekyll build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://jorge210289.github.io/uafam/"
+  },
+  "author": "Jorge Luis Abreu",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-postcss": "^7.0.1",
+    "gulp-purgecss": "^1.0.0",
+    "gulp-uglify": "^3.0.0",
+    "postcss-import": "^11.1.0",
+    "tailwindcss": "^0.5.3"
+  },
+  "dependencies": {
+    "gulp-rename": "^1.3.0"
+  }
+}
