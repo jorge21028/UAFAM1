@@ -1,10 +1,10 @@
 ---
 layout: campus
 
-title: Campus
-description: Lee todo sobre nuestro campus y su variedad de naturaleza.
+title: Nuestra sede
+description: Conoce nuestra sede.
 
-permalink: /instituto/campus/
+permalink: /UAFAM1/campus/
 menus: institute
 
 area_production:
