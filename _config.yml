@@ -1,0 +1,32 @@
+# Base Variables
+title: UAFAM
+subtitle: Universidad Agroforestal Fernando Arturo de Meriño
+url: http://uafam.edu.do
+
+# SASS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# URLs
+permalink: pretty
+
+# Collections
+collections:
+  careers:
+    output: true
+    permalink: /UAFAM3/:collection/:name
+  teachers:
+    output: false
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.js
+  - node_modules
+  - package.json
+  - package-lock.json
+  - src
+  - tailwind.js
+
+theme: jekyll-theme-midnight
