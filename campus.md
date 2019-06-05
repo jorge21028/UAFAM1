@@ -4,7 +4,7 @@ layout: campus
 title: Nuestra sede
 description: Conoce nuestra sede.
 
-permalink: /UAFAM1/campus/
+permalink: /uafam/campus/
 menus: institute
 
 area_production:
