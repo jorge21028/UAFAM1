@@ -21,17 +21,17 @@ about:
   title: Forjando profesionales desde 1996
 
 tiles:
-  - name: El Campus
-    description: 320 tareas de tierra con una gran biodiversidad...
-    url: /instituto/campus/
+  - name: Nuestra sede
+    description: Ubicada en el municipio de la eterna primavera...
+    url: /uafam1/campus/
     thumbnail: https://res.cloudinary.com/instituto-del-ambiente/image/upload/pages/campus.jpg
-  - name: Las Carreras
-    description: Infórmate sobre las carreras que puedes estudiar...
-    url: /instituto/carreras/
+  - name: Nuestra oferta académica
+    description: Elíge una de nuestras carreras y asegura tu futuro
+    url: /uafam1/carreras/
     thumbnail: https://res.cloudinary.com/instituto-del-ambiente/image/upload/c_scale,q_80,w_550/pages/hombre-trabajando.jpg
   - name: Los Profesores
     description: Ven a conocer nuestros especialistas y profesores...
-    url: /instituto/profesores/
+    url: /uafam1/profesores/
     thumbnail: https://res.cloudinary.com/instituto-del-ambiente/image/upload/c_scale,q_80,w_550/pages/profesores.jpg
 ---
 
