@@ -27,11 +27,11 @@ tiles:
     thumbnail: https://res.cloudinary.com/instituto-del-ambiente/image/upload/pages/campus.jpg
   - name: Nuestra oferta académica
     description: Elíge una de nuestras carreras y asegura tu futuro
-    url: /UAFAM1/carreras/
+    url: /uafam/carreras/
     thumbnail: https://res.cloudinary.com/instituto-del-ambiente/image/upload/c_scale,q_80,w_550/pages/hombre-trabajando.jpg
   - name: Los Profesores
     description: Ven a conocer nuestros especialistas y profesores...
-    url: /UAFAM1/profesores/
+    url: /uafam/profesores/
     thumbnail: https://res.cloudinary.com/instituto-del-ambiente/image/upload/c_scale,q_80,w_550/pages/profesores.jpg
 ---
 
