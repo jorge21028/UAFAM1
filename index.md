@@ -23,15 +23,15 @@ about:
 tiles:
   - name: Nuestra sede
     description: Ubicada en el municipio de la eterna primavera...
-    url: /uafam1/campus/
+    url: /UAFAM1/campus/
     thumbnail: https://res.cloudinary.com/instituto-del-ambiente/image/upload/pages/campus.jpg
   - name: Nuestra oferta académica
     description: Elíge una de nuestras carreras y asegura tu futuro
-    url: /uafam1/carreras/
+    url: /UAFAM1/carreras/
     thumbnail: https://res.cloudinary.com/instituto-del-ambiente/image/upload/c_scale,q_80,w_550/pages/hombre-trabajando.jpg
   - name: Los Profesores
     description: Ven a conocer nuestros especialistas y profesores...
-    url: /uafam1/profesores/
+    url: /UAFAM1/profesores/
     thumbnail: https://res.cloudinary.com/instituto-del-ambiente/image/upload/c_scale,q_80,w_550/pages/profesores.jpg
 ---
 
