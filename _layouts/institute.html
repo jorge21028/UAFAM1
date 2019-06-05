@@ -1,0 +1,144 @@
+---
+layout: default
+---
+
+<section class="py-16 max-w-2xl px-6 mx-auto">
+  <div class="md:flex md:items-end">
+    <div class="md:text-right md:w-2/5 md:mr-8 mb-6 md:mb-0">
+      <p class="font-serif text-green text-xl mb-3">{{ page.intro.pretitle }}</p>
+      <h2 class="text-black text-3xl md:text-4xl leading-tight">{{ page.intro.title }}</h2>
+    </div>
+  
+    <p class="md:w-3/5 text-lg text-grey-dark mb-1">{{ content | strip_html }}</p>
+  </div>
+</section>
+
+
+
+<section class="max-w-2xl px-6 mx-auto pb-8">
+  <div class="md:flex md:-mx-4">
+    {% for principle in page.principles %}
+      <article class="md:mx-4 mb-6">
+        <h3 class="lined uppercase text-black mb-6">{{ principle.title }}</h3>
+        <svg class="text-green border border-solid border-grey-light p-3 box-content float-left mt-1 mr-6 mb-2" width="50" height="50">
+          <use xlink:href="/icons/symbol-defs.svg#{{ principle.icon }}"></use>
+        </svg>
+        <p class="font-light">{{ principle.content }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+
+
+{% include video.html title="Mira el video ahora" pretitle="Hay mucho que ver" url="https://www.youtube.com/embed/kCsTN1Z9dQE" %}
+
+
+
+<section class="max-w-2xl md:px-6 mx-auto md:py-16">
+  <div class="relative flex items-center">
+    <div class="text-right md:mr-8 md:w-3/5 z-20 px-6 py-16 md:p-0">
+      <h2 class="text-black mb-4 text-3xl bg-white inline-block px-4 py-1 md:px-0">{{ page.careers.title }}</h2>
+    
+       <p class="bg-white p-4 mb-4 md:p-0">{{ page.careers.content }}</p>
+    
+       <a href="/instituto/requisitos/" class="button-white">Como aplicar</a>
+       <a href="/instituto/carreras/" class="button">Las carreras</a>
+    </div>
+  
+    <figure class="md:w-2/5 absolute md:static pin-l pin-t w-full h-full z-10">
+      <picture>
+        <source data-lazy data-srcset="{{ page.careers.image_path | replace: 'upload', 'upload/c_scale,q_70,w_750' | replace: '.jpg', '.webp' }}" type="image/webp">
+        <img data-lazy data-src="{{ page.careers.image_path | replace: 'upload', 'upload/c_scale,q_70,w_750' }}" class="w-full h-full object-cover" alt="{{ page.careers.title }}" width="800" height="533">
+        <noscript>
+          <img src="{{ page.careers.image_path | replace: 'upload', 'upload/c_scale,q_70,w_750' }}" class="w-full h-full object-cover" alt="{{ page.careers.title }}" width="800" height="533">
+        </noscript>
+      </picture>
+    </figure>
+  </div>
+</section>
+
+
+
+<section class="md:py-16 md:bg-grey-lighter md:px-6">
+  <div class="max-w-2xl mx-auto flex items-center relative">
+    <figure class="md:w-2/5 absolute md:static pin-l pin-t w-full h-full z-10">
+      <picture>
+        <source data-lazy data-srcset="{{ page.campus.image_path | replace: 'upload', 'upload/c_scale,q_70,w_750' | replace: '.jpg', '.webp' }}" type="image/webp">
+        <img data-lazy data-src="{{ page.campus.image_path | replace: 'upload', 'upload/c_scale,q_70,w_750' }}" class="w-full h-full object-cover" alt="{{ page.campus.title }}" width="800" height="533">
+        <noscript>
+          <img src="{{ page.campus.image_path | replace: 'upload', 'upload/c_scale,q_70,w_750' }}" class="w-full h-full object-cover" alt="{{ page.campus.title }}" width="800" height="533">
+        </noscript>
+      </picture>
+    </figure>
+  
+    <div class="md:ml-8 md:w-3/5 z-20 px-6 py-16 md:p-0">
+      <h2 class="text-black mb-4 text-3xl bg-white md:bg-transparent inline-block px-4 py-1 md:px-0">{{ page.campus.title }}</h2>
+  
+      <p class="bg-white md:bg-transparent p-4 mb-4 md:p-0">{{ page.campus.content }}</p>
+  
+      <a href="/instituto/campus/" class="button">Detalles y fotografías</a>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="max-w-2xl md:px-6 mx-auto md:py-16">
+  <div class="flex items-center relative">
+    <div class="text-right md:mr-8 md:w-3/5 z-20 px-6 py-16 md:p-0">
+      <h2 class="text-black mb-4 text-3xl bg-white md:bg-transparent inline-block px-4 py-1 md:px-0">{{ page.teachers.title }}</h2>
+
+      <p class="bg-white md:bg-transparent mb-4 p-4 md:p-0">{{ page.teachers.content }}</p>
+
+      <a href="/instituto/profesores/" class="button">Los profesores</a>
+    </div>
+
+    <figure class="md:w-2/5 absolute md:static pin-l pin-t w-full h-full z-10">
+      <picture>
+        <source data-lazy data-srcset="{{ page.teachers.image_path | replace: 'upload', 'upload/c_scale,q_70,w_750' | replace: '.jpg', '.webp' }}" type="image/webp">
+        <img data-lazy data-src="{{ page.teachers.image_path | replace: 'upload', 'upload/c_scale,q_70,w_750' }}" class="w-full h-full object-cover" alt="{{ page.teachers.title }}" width="800" height="533">
+        <noscript>
+          <img src="{{ page.teachers.image_path | replace: 'upload', 'upload/c_scale,q_70,w_750' }}" class="w-full h-full object-cover" alt="{{ page.teachers.title }}" width="800" height="533">
+        </noscript>
+      </picture>
+    </figure>
+  </div>
+</section>
+
+
+
+<section class="py-16 bg-grey-lighter px-6">
+  <div class="max-w-2xl mx-auto md:flex md:text-center">
+    <div class="flex-1 mb-6 md:mb-0">
+      <h3 class="text-black mb-6 text-3xl">{{ page.application.title }}</h3>
+      <p class="content mb-6">{{ page.application.content }}</p>
+      <a href="/instituto/requisitos/" class="button-white">Más detalles</a>
+    </div>
+
+    <div class="md:ml-8 flex-1">
+      <h3 class="text-black mb-6 text-3xl">{{ page.history.title }}</h3>
+      <p class="content mb-6">{{ page.history.content }}</p>
+      <a href="/instituto/historia/" class="button-white">Más detalles</a>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="py-16 px-6" data-lazy data-class="bg-forest-roof">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="text-black mb-8 text-3xl inline-block bg-white px-4 py-1" data-action="colorize">{{ page.values.title }}</h2>
+
+    <div class="md:flex md:flex-wrap md:-mx-2">
+      {% for value in page.values.items %}
+        <div class="md:px-2 md:w-1/2 mb-4">
+          <article class="bg-white p-4 h-full">
+            <h3 class="text-black uppercase font-medium lined mb-6">{{ value.title }}</h3>
+            <p class="font-light">{{ value.text }}</p>
+          </article>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,69 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page.description }}">
+    <meta name="author" content="Andreas Remdt">
+    
+    <title>{{ page.title }} | {{ site.title }}</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/icons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/icons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/icons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/icons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/icons/apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="/icons/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="/icons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/icons/favicon-128.png" sizes="128x128">
+    <meta name="application-name" content="{{ site.title }}">
+    <meta name="msapplication-TileColor" content="#9dc701">
+    <meta name="msapplication-TileImage" content="/icons/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="/icons/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="/icons/mstile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="/icons/mstile-310x150.png">
+    <meta name="msapplication-square310x310logo" content="/icons/mstile-310x310.png">
+
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed para {{ site.title }}" href="/feed.xml">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#9DC701">
+
+    <link rel="dns-prefetch" href="https://res.cloudinary.com">
+    <link rel="preconnect" href="https://res.cloudinary.com">
+  </head>
+  <body>
+    <noscript>
+      <p class="bg-green text-center p-4 text-white">JavaScript está deshabilitado en tu navegador. Este sitio web usa JavaScript para mejorar tu experiencia. Si no activas JavaScript, este sitio web no puede funcionar o mostrarse correctamente.</p>
+    </noscript>
+    {% include header.html %}
+    {% include navigation.html %}
+    {% include hero.html %}
+
+    {{ content }}
+    
+    {% include footer.html %}
+
+    <script src="/js/modernizr.min.js" defer></script>
+    <script src="/js/observer-polyfill.min.js" defer></script>
+    <script src="/js/svgxuse.min.js" defer></script>
+    <script src="/js/jquery.min.js" defer></script>
+    <script src="/js/jquery.fancybox.min.js" defer></script>
+    <script src="/js/main.min.js" defer></script>
+    {% if page.url == "/blog/buscar/" %}
+      <script src="/js/search.min.js" defer></script>
+    {% elsif page.url == "/contactanos/" %}
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvasE3DqVJKzmtB5xXkYfFtQkQ7kxEhZM&callback=initMap" defer></script>
+    {% endif %}
+  </body>
+</html>

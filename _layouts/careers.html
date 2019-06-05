@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+{% assign careers = site.careers | size %}
+
+<main class="py-16 max-w-2xl mx-auto px-6">
+  <p class="lined text-3xl md:text-4xl text-black mb-8 leading-tight font-bold" data-action="colorize">Actualmente, ofrecemos {{ careers }} carreras:</p>
+
+  <div class="lg:flex lg:-mx-4">
+    {% for career in site.careers %}
+      <article class="lg:w-1/2 flex flex-col sm:flex-row lg:mx-4 mb-4 border border-grey-light">
+        <div class="bg-cover bg-center bg-no-repeat w-full h-48 sm:h-auto sm:w-1/3 flex-no-shrink" style="background-image: url('{{ career.thumbnail | replace: 'upload', 'upload/c_scale,q_60,w_550' }}');"></div>
+        <div class="py-4 px-6 flex flex-col items-start">
+          <h2 class="mb-4 font-medium text-black text-xl" data-action="colorize">{{ career.title }}</h2>
+          <p class="font-light mb-4">{{ career.description }}</p>
+          <a href="{{ career.url }}" class="mt-auto button">Más detalles</a>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</main>
+
+{% include video.html title="La historia de una ex-estudiante" pretitle="&quot;Conseguí un Empleo&quot;" url="https://www.youtube.com/embed/qCSnEK1F350" %}

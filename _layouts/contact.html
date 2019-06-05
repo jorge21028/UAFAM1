@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<section class="py-16 px-6 max-w-2xl mx-auto md:flex text-center">
+  <div class="md:flex-1 md:mr-4 mb-4 md:mb-0 bg-grey-lighter border border-solid border-grey-light p-4">
+    <h3 class="text-black font-medium mb-1 uppercase">Correo electrónico</h3>
+    <a class="font-light text-grey-darker" href="mailto:{{ site.data.information.email }}">{{ site.data.information.email }}</a>
+  </div>
+  
+  <div class="md:flex-1 md:mr-4 mb-4 md:mb-0 bg-grey-lighter border border-solid border-grey-light p-4">
+    <h3 class="text-black font-medium mb-1 uppercase">Número de teléfono</h3>
+    <a class="font-light text-grey-darker" href="tel:{{ site.data.information.phone | remove: ' ' }}">{{ site.data.information.phone }}</a>
+  </div>
+
+  <div class="md:flex-1 bg-grey-lighter border border-solid border-grey-light p-4">
+    <h3 class="text-black font-medium mb-1 uppercase">Ubicación</h3>
+    <p class="font-light">{{ site.data.information.address }}</p>
+  </div>
+</section>
+
+<section class="px-6 max-w-2xl mx-auto pb-8 mb-8">
+  <h2 class="leading-tight text-3xl md:text-4xl mb-4 text-black text-center" data-action="colorize">Escríbenos un correo electrónico</h2>
+
+  <div class="md:flex pt-6">
+    <form name="contact" action="/contactanos/gracias/" class="md:flex-1 md:mr-4 clearfix" data-netlify="true">
+      <p class="hidden">
+        <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+      </p>
+      <input type="text" class="input" name="name" placeholder="Tu nombre..." required aria-label="Escribe tu nombre aquí">
+      <input type="email" class="input" name="email" placeholder="Tu correo electrónico..." required aria-label="Escribe tu correo electrónico aquí">
+      <textarea class="input" name="message" rows="6" placeholder="Tu mensaje..." required aria-label="Escribe tu mensaje aquí"></textarea>
+      <button type="submit" class="button float-right">Enviar</button>
+    </form>
+
+    <div class="map md:flex-1 h-64 md:h-auto mt-6 md:mt-0"></div>
+  </div>
+</section>

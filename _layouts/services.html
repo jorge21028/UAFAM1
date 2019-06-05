@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<section class="py-16 px-6 max-w-2xl mx-auto">
+  <p class="text-xl sm:text-2xl text-green font-serif text-center mb-3">{{ page.intro.pretitle }}</p>
+  <h2 class="text-4xl md:text-5xl mb-8 text-black leading-tight text-center">{{ page.intro.title }}</h2>
+  <p class="text-center text-lg md:text-xl font-light">{{ content | strip_html }}</p>
+
+  <div class="lg:flex lg:-mx-4 lg:flex-wrap mt-8 pt-8">
+    {% for service in page.servicios %}
+    <article class="lg:w-1/2 flex flex-col sm:flex-row lg:px-4 mb-8">
+      <div class="bg-cover bg-center bg-no-repeat sm:w-1/3 flex-no-shrink h-48 sm:h-auto" style="background-image: url('{{ service.image | replace: 'upload', 'upload/c_scale,q_60,w_500' }}');"></div>
+      <div class="py-4 px-6 sm:border-l-0 border border-solid border-grey-light flex flex-col items-start">
+        <h3 class="mb-4 font-medium text-black text-xl" data-action="colorize">{{ service.title }}</h3>
+        <p class="font-light mb-4">{{ service.description }}</p>
+        <a href="{{ service.url }}" class="mt-auto button">Más detalles</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<h2 class="text-black text-4xl leading-tight text-center mb-6" data-action="colorize">Características de nuestros servicios</h2>
+
+
+{% for characteristic in page.characteristics %}
+  {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+  <section class="md:py-16 md:px-6{% if thecycle == 'even' %} md:bg-grey-lighter{% endif %}">
+    <div class="max-w-2xl mx-auto flex items-center relative{% if thecycle == 'even' %} flex-row-reverse{% endif %}">
+      <figure class="md:w-2/5 absolute md:static pin-l pin-t w-full h-full z-10">
+        <picture>
+          <source data-lazy data-srcset="{{ characteristic.image | replace: 'upload', 'upload/c_scale,q_60,w_750' | replace: '.jpg', '.webp' }}" type="image/webp">
+          <img data-lazy data-src="{{ characteristic.image | replace: 'upload', 'upload/c_scale,q_60,w_750' }}" class="w-full h-full object-cover" alt="{{ characteristic.title }}" width="800" height="533">
+          <noscript>
+            <img src="{{ characteristic.image | replace: 'upload', 'upload/c_scale,q_60,w_750' }}" class="w-full h-full object-cover" alt="{{ characteristic.title }}" width="800" height="533">
+          </noscript>
+        </picture>
+      </figure>
+
+      <div class="{% if thecycle == 'odd' %}md:ml-8{% else %}md:mr-8{% endif %} md:w-3/5 z-20 px-6 py-16 md:p-0{% if thecycle == 'even' %} text-right{% endif %}">
+        <h3 class="text-black mb-6 text-3xl bg-white md:bg-transparent inline-block px-4 py-1 md:px-0">{{ characteristic.title }}</h3>
+
+        <ul class="bg-white md:bg-transparent p-4 md:p-0 list-reset">
+          {% for item in characteristic.items %}
+          <li class="mb-3">{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
+{% endfor %}
+
+{% include contact-us.html %}
