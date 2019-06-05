@@ -23,7 +23,7 @@ about:
 tiles:
   - name: Nuestra sede
     description: Ubicada en el municipio de la eterna primavera...
-    url: /UAFAM1/campus/
+    url: /uafam1/campus/
     thumbnail: https://res.cloudinary.com/instituto-del-ambiente/image/upload/pages/campus.jpg
   - name: Nuestra oferta académica
     description: Elíge una de nuestras carreras y asegura tu futuro
